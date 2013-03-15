@@ -161,7 +161,7 @@
     return this.each(function () {
       var $this = $(this)
         , data = $this.data('carousel')
-        , options = $.extend({}, $.fn.carousel.defaults, typeof option == 'object' && option)
+        , options = $.extend({}, $.fn.carousel.defaults, typeof option == 'object' && option, $this.data())
         , action = typeof option == 'string' ? option : options.slide
       if (!data) $this.data('carousel', (data = new Carousel(this, options)))
       if (typeof option == 'number') data.to(option)
